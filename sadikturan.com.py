@@ -2,15 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
-
 url= "https://sadikturan.com/"
 response = requests.get(url)
 soup = BeautifulSoup(response.text,"html.parser")
-
 listOfCours = soup.find_all(class_="card kurs")
-
-
-
 while True:
     choice = int(input("Print to File - 1\nPrint On Screen - 2 \nExit - 3\nAnswer : "))
     if choice == 3:
