@@ -1,4 +1,3 @@
-
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -6,7 +5,6 @@ import json
 url = "https://medium.com/"
 response = requests.get(url)
 soup = BeautifulSoup(response.text,"html.parser")
-
 articles = soup.find("div",class_="jv jw y").find_all("div",class_="ae cx") 
 while True:
     choice = int(input("Print to File - 1\nPrint On Screen - 2 \nExit - 3\nAnswer : "))
