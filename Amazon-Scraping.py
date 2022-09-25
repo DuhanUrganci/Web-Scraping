@@ -26,7 +26,6 @@ class Amazon:
                         print(base)
                     else:
                         name = a.h2.text
-                        price = doc.find(class_="a-price-whole")
                         base = {
                             "Name":name,
                             "Price":"Ürünün Fiyat Bilgisi Yoktur"
